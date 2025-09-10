@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { defineComponent, useCssVars, unref, computed, inject, openBlock, createElementBlock, withModifiers, createElementVNode, normalizeClass, pushScopeId, popScopeId, ref, watch, onMounted, onBeforeUnmount, toDisplayString, Fragment, renderList, useSlots, renderSlot, createCommentVNode, toRefs, provide, normalizeStyle, createTextVNode, createBlock, normalizeProps, mergeProps, guardReactiveProps, createVNode, isRef, createSlots, withCtx } from "vue";
+import { defineComponent, useCssVars, unref, computed, inject, openBlock, createElementBlock, withModifiers, createElementVNode, normalizeClass, pushScopeId, popScopeId, ref, watch, onMounted, onBeforeUnmount, toDisplayString, Fragment, renderList, useSlots, renderSlot, createCommentVNode, toRefs, provide, normalizeStyle, createBlock, normalizeProps, mergeProps, guardReactiveProps, createTextVNode, createVNode, isRef, createSlots, withCtx } from "vue";
 var MultipleSelectCheckBox_vue_vue_type_style_index_0_scoped_true_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -1213,7 +1213,7 @@ var propsWithDefault = {
 };
 var DataTable_vue_vue_type_style_index_0_lang = "";
 var DataTable_vue_vue_type_style_index_1_scoped_true_lang = "";
-const _withScopeId = (n) => (pushScopeId("data-v-49122455"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-2da37de7"), n = n(), popScopeId(), n);
 const _hoisted_1 = ["id"];
 const _hoisted_2 = ["onClick"];
 const _hoisted_3 = {
@@ -1275,8 +1275,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props, { expose, emit: emits }) {
     const props = __props;
     useCssVars((_ctx) => ({
-      "1f4f0011": unref(tableMinHeightPx),
-      "37b52d7f": unref(tableHeightPx)
+      "7616396c": unref(tableMinHeightPx),
+      "527e2bf8": unref(tableHeightPx)
     }));
     const {
       tableNodeId,
@@ -1492,7 +1492,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               createElementVNode("tr", null, [
                 (openBlock(true), createElementBlock(Fragment, null, renderList(unref(headersForRender), (header, index) => {
                   return openBlock(), createElementBlock("th", {
-                    key: unref(tableNodeId) + "_" + index,
+                    key: unref(tableNodeId) + "_" + header.value,
                     class: normalizeClass([{
                       sortable: header.sortable,
                       "none": header.sortable && header.sortType === "none",
@@ -1503,7 +1503,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     style: normalizeStyle(getFixedDistance(header.value)),
                     onClick: withModifiers(($event) => header.sortable && header.sortType ? unref(updateSortField)(header.value, header.sortType) : null, ["stop"])
                   }, [
-                    createTextVNode(toDisplayString(header) + " ", 1),
                     header.text === "checkbox" ? (openBlock(), createBlock(MultipleSelectCheckBox, {
                       key: unref(multipleSelectStatus),
                       status: unref(multipleSelectStatus),
@@ -1561,7 +1560,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   }, [
                     (openBlock(true), createElementBlock(Fragment, null, renderList(unref(headerColumns), (column, i) => {
                       return openBlock(), createElementBlock("td", {
-                        key: unref(tableNodeId) + "_row_" + (item.id || index) + "_col_" + i,
+                        key: unref(tableNodeId) + "_row_" + (item.id || index) + "_col_" + column,
                         style: normalizeStyle(getFixedDistance(column, "td")),
                         class: normalizeClass([{
                           "shadow": column === unref(lastFixedColumn),
@@ -1671,7 +1670,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var DataTable = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-49122455"]]);
+var DataTable = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2da37de7"]]);
 if (typeof window !== "undefined" && window.Vue) {
   window.Vue.createApp({}).component("Vue3EasyDataTable", DataTable);
 }

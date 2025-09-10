@@ -36,7 +36,7 @@
           <tr>
             <th
               v-for="(header, index) in headersForRender"
-              :key="tableNodeId + '_' + index"
+              :key="tableNodeId + '_' + header.value"
               :class="[{
                 sortable: header.sortable,
                 'none': header.sortable && header.sortType === 'none',
@@ -48,7 +48,6 @@
               :style="getFixedDistance(header.value)"
               @click.stop="(header.sortable && header.sortType) ? updateSortField(header.value, header.sortType) : null"
             >
-              {{header}}
               <MultipleSelectCheckBox
                 v-if="header.text === 'checkbox'"
                 :key="multipleSelectStatus"
@@ -138,7 +137,7 @@
             >
               <td
                 v-for="(column, i) in headerColumns"
-                :key="tableNodeId + '_row_' + (item.id || index) + '_col_' + i"
+                :key="tableNodeId + '_row_' + (item.id || index) + '_col_' + column"
                 :style="getFixedDistance(column, 'td')"
                 :class="[{
                   'shadow': column === lastFixedColumn,
