@@ -1213,7 +1213,7 @@ var propsWithDefault = {
 };
 var DataTable_vue_vue_type_style_index_0_lang = "";
 var DataTable_vue_vue_type_style_index_1_scoped_true_lang = "";
-const _withScopeId = (n) => (pushScopeId("data-v-2da37de7"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-da2f82c4"), n = n(), popScopeId(), n);
 const _hoisted_1 = ["id"];
 const _hoisted_2 = ["onClick"];
 const _hoisted_3 = {
@@ -1275,8 +1275,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props, { expose, emit: emits }) {
     const props = __props;
     useCssVars((_ctx) => ({
-      "7616396c": unref(tableMinHeightPx),
-      "527e2bf8": unref(tableHeightPx)
+      "3e1749b6": unref(tableMinHeightPx),
+      "35406a2a": unref(tableHeightPx)
     }));
     const {
       tableNodeId,
@@ -1568,7 +1568,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         }, typeof _ctx.bodyItemClassName === "string" ? _ctx.bodyItemClassName : _ctx.bodyItemClassName(column, index + 1), `direction-${unref(bodyTextDirection)}`]),
                         onClick: ($event) => column === "expand" ? unref(updateExpandingItemIndexList)(index + unref(prevPageEndIndex), item, $event) : null
                       }, [
-                        createTextVNode(toDisplayString(item.id || index) + " ", 1),
                         unref(slots)[`item-${column}`] ? renderSlot(_ctx.$slots, `item-${column}`, normalizeProps(mergeProps({ key: 0 }, item)), void 0, true) : unref(slots)[`item-${column.toLowerCase()}`] ? renderSlot(_ctx.$slots, `item-${column.toLowerCase()}`, normalizeProps(mergeProps({ key: 1 }, item)), void 0, true) : column === "expand" ? (openBlock(), createElementBlock("i", {
                           key: 2,
                           class: normalizeClass(["expand-icon", { "expanding": unref(expandingItemIndexList).includes(unref(prevPageEndIndex) + index) }])
@@ -1670,7 +1669,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var DataTable = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2da37de7"]]);
+var DataTable = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-da2f82c4"]]);
 if (typeof window !== "undefined" && window.Vue) {
   window.Vue.createApp({}).component("Vue3EasyDataTable", DataTable);
 }

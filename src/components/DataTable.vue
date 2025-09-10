@@ -146,7 +146,6 @@
                 }, typeof bodyItemClassName === 'string' ? bodyItemClassName : bodyItemClassName(column, index + 1), `direction-${bodyTextDirection}`]"
                 @click="column === 'expand' ? updateExpandingItemIndexList(index + prevPageEndIndex, item, $event) : null"
               >
-                {{(item.id || index)}}
                 <slot
                   v-if="slots[`item-${column}`]"
                   :name="`item-${column}`"
