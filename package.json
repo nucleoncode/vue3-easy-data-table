@@ -3,7 +3,7 @@
   "author": "nucleoncode",
   "description": "A customizable and easy-to-use data table component made with Vue.js 3.x.",
   "private": false,
-  "version": "1.5.49",
+  "version": "1.5.50",
   "types": "./types/main.d.ts",
   "license": "MIT",
   "keywords": [
@@ -14,6 +14,17 @@
     "vue-component"
   ],
   "homepage": "https://github.com/HC200ok/vue3-easy-data-table",
+  "main": "./dist/vue3-easy-data-table.umd.js",
+  "module": "./dist/vue3-easy-data-table.es.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/main.d.ts",
+      "import": "./dist/vue3-easy-data-table.es.js",
+      "require": "./dist/vue3-easy-data-table.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
