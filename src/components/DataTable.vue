@@ -20,7 +20,7 @@
         <colgroup>
           <col
             v-for="(header, index) in headersForRender"
-            :key="index"
+            :key="tableNodeId + '_' + index"
             :style="getColStyle(header)"
           />
         </colgroup>
@@ -36,7 +36,7 @@
           <tr>
             <th
               v-for="(header, index) in headersForRender"
-              :key="index"
+              :key="tableNodeId + '_' + index"
               :class="[{
                 sortable: header.sortable,
                 'none': header.sortable && header.sortType === 'none',
@@ -48,6 +48,7 @@
               :style="getFixedDistance(header.value)"
               @click.stop="(header.sortable && header.sortType) ? updateSortField(header.value, header.sortType) : null"
             >
+              {{header}}
               <MultipleSelectCheckBox
                 v-if="header.text === 'checkbox'"
                 :key="multipleSelectStatus"
@@ -123,7 +124,7 @@
           />
           <template
             v-for="(item, index) in pageItems"
-            :key="index"
+            :key="tableNodeId + '_row_' + (item.id || index)"
           >
             <tr
               :class="[{'even-row': (index + 1) % 2 === 0},
@@ -137,7 +138,7 @@
             >
               <td
                 v-for="(column, i) in headerColumns"
-                :key="i"
+                :key="tableNodeId + '_row_' + (item.id || index) + '_col_' + i"
                 :style="getFixedDistance(column, 'td')"
                 :class="[{
                   'shadow': column === lastFixedColumn,
@@ -145,7 +146,8 @@
                 // eslint-disable-next-line max-len
                 }, typeof bodyItemClassName === 'string' ? bodyItemClassName : bodyItemClassName(column, index + 1), `direction-${bodyTextDirection}`]"
                 @click="column === 'expand' ? updateExpandingItemIndexList(index + prevPageEndIndex, item, $event) : null"
-              > 
+              >
+                {{(item.id || index)}}
                 <slot
                   v-if="slots[`item-${column}`]"
                   :name="`item-${column}`"

@@ -189,7 +189,7 @@ export default {
   },
   tableNodeId: {
     type: String,
-    default: '',
+    default: 'dataTable',
   },
   showIndexSymbol: {
     type: String,
